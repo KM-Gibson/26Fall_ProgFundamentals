@@ -1,0 +1,55 @@
+TL;DR
+bash
+cd your/repo
+git pull origin main           # Get latest
+# (make changes)
+git add .
+git commit -m "Your message"
+git push origin main           # Send to remote
+
+------
+
+1. Navigate to your cloned repo
+
+bash
+cd path/to/your/repository
+2. Check your remote connection (verify origin exists)
+
+bash
+git remote -v
+You should see something like:
+
+origin  https://github.com/username/repo.git (fetch)
+origin  https://github.com/username/repo.git (push)
+3. Update your local copy (get latest changes from remote)
+
+bash
+git pull origin main
+(Replace main with master if your default branch is different)
+
+4. Make your changes
+Edit files however you want in your code editor.
+
+5. Check what changed
+
+bash
+git status
+You'll see a list of modified files.
+
+6. Stage your changes (prepare them to be committed)
+
+bash
+git add .
+(The . stages all changes. Use git add filename to stage specific files)
+
+7. Commit your changes (create a snapshot with a message)
+
+bash
+git commit -m "Your descriptive message here"
+Example: git commit -m "Fix login bug in auth.js"
+
+8. Push to remote (upload to GitHub/GitLab/etc)
+
+bash
+git push origin main
+(Again, replace main if your branch is different)
